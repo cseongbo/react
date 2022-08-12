@@ -14,16 +14,24 @@
     <script type="text/babel">
 
         var list = [1,2,3,4,5]
-        var newList = []
+        
+        class NumList extends React.Component {
+            constructor(props) {
+                super(props)
+            }
 
-        // var newList = list.map ((num) => (num*2))
-        for (let i = 0; i < list.length; i++) {
-            newList[i] = list[i]*2
+            render() {
+                const itemList = this.props.nums.map((num) => (
+                    <l1>{num}</l1>
+                ))
+                return (
+                    <ul>
+                        {itemList}
+                    </ul>
+                )
+            }
         }
-        var newList = list.map(function(num){
-            return num*2
-        })
-        console.log(newList)
+        ReactDOM.render(<NumList nums={list} />, document.getElementById('root'))
 
     </script>
     
