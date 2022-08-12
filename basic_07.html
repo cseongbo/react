@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class MyTag extends React.Component {
+            render() {
+                return (
+                    <div style={{border:'1px solid black', margin:'10px'}}>
+                    <h1>Hello {this.props.name}</h1>
+                    <p>{this.props.paragraph}</p>
+                    </div>
+                )
+            }
+        }
+        const element = (
+            <div>
+                <MyTag name="Kim" paragraph="hi" />
+                <MyTag name="Park" />
+                <MyTag name="Lee" />
+            </div>
+        )
+        const root = document.getElementById('root')
+        ReactDOM.render(element, root)
+        
+    </script>
+</body>
+
+      
+</html>

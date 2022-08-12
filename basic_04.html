@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+       
+        const element = (
+            <div>
+                <h1>Main Title</h1>
+                <h2>Sub Title</h2>
+            </div>
+        )
+
+
+        const root = document.getElementById('root')
+        ReactDOM.render(element, root)
+        // 첫번째 매개변수: 어떤여소를 넣을 것인가?
+        // 두번째 매개변수: 어디 넣을것인가?
+    </script>
+</body>
+
+      
+</html>
